@@ -1,4 +1,4 @@
-import 'package:flutter_slider_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
 
 class LocalStorageMock implements ILocalStorage {
   List<String> storage;

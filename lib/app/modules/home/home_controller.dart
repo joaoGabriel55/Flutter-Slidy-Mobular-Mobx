@@ -1,4 +1,4 @@
-import 'package:flutter_slider_modular/app/shared/repositories/pokemon_repository.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/pokemon_repository.dart';
 import 'package:mobx/mobx.dart';
 part 'home_controller.g.dart';
 

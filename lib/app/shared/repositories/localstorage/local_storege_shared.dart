@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_slider_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalStorageShared implements ILocalStorage {

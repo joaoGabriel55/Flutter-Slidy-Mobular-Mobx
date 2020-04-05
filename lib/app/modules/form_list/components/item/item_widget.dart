@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_slider_modular/app/modules/form_list/form_list_controller.dart';
+import 'package:flutter_slidy_modular/app/modules/form_list/form_list_controller.dart';
 
 class ItemWidget extends StatelessWidget {
   final int index;

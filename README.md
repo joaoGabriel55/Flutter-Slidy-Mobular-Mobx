@@ -13,6 +13,9 @@ A few resources to get you started if this is your first Flutter project:
 - For generate generated files for Mobx. Run command: 
 
     ``flutter pub run build_runner watch``
+- For build and install Android APK:
+
+    ``slidy run android-build android-install``
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
@@ -20,4 +23,4 @@ samples, guidance on mobile development, and a full API reference.
 
 # About
 
-Mobile Pokedex using [Pokeapi](https://pokeapi.co/). Thanks Flutterando.
+Mobile Pokedex using [Pokeapi](https://pokeapi.co/). Thanks Flutterando for knowledge passed.

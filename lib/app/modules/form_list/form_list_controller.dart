@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_slider_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
 import 'package:mobx/mobx.dart';
 
 part 'form_list_controller.g.dart';

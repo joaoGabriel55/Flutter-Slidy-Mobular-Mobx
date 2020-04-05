@@ -1,12 +1,12 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular/flutter_modular_test.dart';
-import 'package:flutter_slider_modular/app/app_module.dart';
-import 'package:flutter_slider_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
-import 'package:flutter_slider_modular/app/shared/repositories/localstorage/local_storage_mock.dart';
+import 'package:flutter_slidy_modular/app/app_module.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_mock.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_slider_modular/app/modules/form_list/form_list_controller.dart';
-import 'package:flutter_slider_modular/app/modules/form_list/form_list_module.dart';
+import 'package:flutter_slidy_modular/app/modules/form_list/form_list_controller.dart';
+import 'package:flutter_slidy_modular/app/modules/form_list/form_list_module.dart';
 
 void main() {
   initModule(AppModule(), changeBinds: [

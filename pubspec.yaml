@@ -1,4 +1,4 @@
-name: flutter_slider_modular
+name: flutter_slidy_modular
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -76,3 +76,5 @@ flutter:
 
 scripts:
   mobx: flutter pub run build_runner watch --delete-conflicting-outputs
+  android-build: flutter build apk --split-per-abi
+  android-install: flutter install

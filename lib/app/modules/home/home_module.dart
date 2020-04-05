@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_slider_modular/app/modules/home/home_controller.dart';
-import 'package:flutter_slider_modular/app/shared/repositories/pokemon_repository.dart';
+import 'package:flutter_slidy_modular/app/modules/home/home_controller.dart';
+import 'package:flutter_slidy_modular/app/shared/repositories/pokemon_repository.dart';
 
 import 'home_page.dart';
 

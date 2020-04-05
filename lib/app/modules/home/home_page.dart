@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_slider_modular/app/shared/models/pokemon.dart';
-import 'package:flutter_slider_modular/app/shared/utils/constants.dart';
+import 'package:flutter_slidy_modular/app/shared/models/pokemon.dart';
+import 'package:flutter_slidy_modular/app/shared/utils/constants.dart';
 
 import 'home_controller.dart';
 

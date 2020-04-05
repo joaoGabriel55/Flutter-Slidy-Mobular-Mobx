@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_modular/flutter_modular_test.dart';
 
-import 'package:flutter_slider_modular/app/modules/login/login_page.dart';
+import 'package:flutter_slidy_modular/app/modules/login/login_page.dart';
 
 main() {
   testWidgets('LoginPage has title', (WidgetTester tester) async {
