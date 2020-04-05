@@ -1,6 +1,6 @@
 # flutter_slider_modular
 
-A new Flutter project with Slider and Modular.
+A new Flutter project with Slidy and Modular.
 
 ## Getting Started
 
