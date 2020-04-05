@@ -1,4 +1,4 @@
-# flutter_slider_modular
+# flutter_slidy_modular
 
 A new Flutter project with Slidy and Modular.
 
