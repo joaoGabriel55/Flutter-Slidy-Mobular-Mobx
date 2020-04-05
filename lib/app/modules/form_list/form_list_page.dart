@@ -24,7 +24,9 @@ class _FormListPageState
               icon: Icon(Icons.add),
               onPressed: controller.text.isEmpty ? null : controller.save,
             );
-          })
+          }),
+          IconButton(
+              icon: Icon(Icons.exit_to_app), onPressed: controller.logoff),
         ],
       ),
       body: Observer(builder: (_) {

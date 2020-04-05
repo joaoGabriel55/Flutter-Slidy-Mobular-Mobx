@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_slidy_modular/app/shared/auth/auth_controller.dart';
+import 'package:mobx/mobx.dart';
 
 class SplashPage extends StatefulWidget {
   final String title;
@@ -10,41 +12,43 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  ReactionDisposer disposer;
+
   @override
   void initState() {
     super.initState();
     // Future.delayed(Duration(seconds: 2))
-    //     .then((v) => {});
+    //     .then((v) => Modular.to.pushReplacementNamed('/login'));
+    disposer = autorun((_) {
+      final auth = Modular.get<AuthController>();
+      if (auth.status == AuthStatus.LOGGEDIN) {
+        Modular.to.pushReplacementNamed('/view-select');
+      } else if (auth.status == AuthStatus.LOGOUT) {
+        Modular.to.pushReplacementNamed('/login');
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    disposer();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.redAccent,
-        body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+      backgroundColor: Colors.redAccent,
+      body: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
             Container(
               margin: EdgeInsets.all(48),
               child: Image.asset("images/pokemon_logo.png"),
             ),
-            // CircularProgressIndicator(backgroundColor: Colors.yellowAccent),
-            RaisedButton(
-              child: Text("View Pokémons"),
-              color: Colors.yellow,
-              onPressed: () {
-                Modular.to.pushReplacementNamed("/home");
-              },
-            ),
-            RaisedButton(
-              child: Text("Form List"),
-              color: Colors.yellow,
-              onPressed: () {
-                Modular.to.pushReplacementNamed("/form-list");
-              },
-            )
-          ],
-        )));
+            CircularProgressIndicator(backgroundColor: Colors.yellowAccent)
+          ])),
+    );
   }
 }

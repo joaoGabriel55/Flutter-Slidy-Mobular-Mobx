@@ -9,38 +9,33 @@ part of 'login_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$LoginController on _LoginBase, Store {
-  final _$valueAtom = Atom(name: '_LoginBase.value');
+  final _$loadingAtom = Atom(name: '_LoginBase.loading');
 
   @override
-  int get value {
-    _$valueAtom.context.enforceReadPolicy(_$valueAtom);
-    _$valueAtom.reportObserved();
-    return super.value;
+  bool get loading {
+    _$loadingAtom.context.enforceReadPolicy(_$loadingAtom);
+    _$loadingAtom.reportObserved();
+    return super.loading;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.context.conditionallyRunInAction(() {
-      super.value = value;
-      _$valueAtom.reportChanged();
-    }, _$valueAtom, name: '${_$valueAtom.name}_set');
+  set loading(bool value) {
+    _$loadingAtom.context.conditionallyRunInAction(() {
+      super.loading = value;
+      _$loadingAtom.reportChanged();
+    }, _$loadingAtom, name: '${_$loadingAtom.name}_set');
   }
 
-  final _$_LoginBaseActionController = ActionController(name: '_LoginBase');
+  final _$loginWithGoogleAsyncAction = AsyncAction('loginWithGoogle');
 
   @override
-  void increment() {
-    final _$actionInfo = _$_LoginBaseActionController.startAction();
-    try {
-      return super.increment();
-    } finally {
-      _$_LoginBaseActionController.endAction(_$actionInfo);
-    }
+  Future<dynamic> loginWithGoogle() {
+    return _$loginWithGoogleAsyncAction.run(() => super.loginWithGoogle());
   }
 
   @override
   String toString() {
-    final string = 'value: ${value.toString()}';
+    final string = 'loading: ${loading.toString()}';
     return '{$string}';
   }
 }

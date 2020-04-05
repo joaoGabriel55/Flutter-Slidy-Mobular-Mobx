@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_slidy_modular/app/shared/auth/auth_controller.dart';
 import 'package:flutter_slidy_modular/app/shared/repositories/localstorage/local_storage_interface.dart';
 import 'package:mobx/mobx.dart';
 
@@ -42,5 +43,11 @@ abstract class _FormListBase with Store {
   remove(int index) {
     list.removeAt(index);
     _storage.put('list', list);
+  }
+
+  @action
+  logoff() async {
+    await Modular.get<AuthController>().logout();
+    Modular.to.pushReplacementNamed('/login');
   }
 }

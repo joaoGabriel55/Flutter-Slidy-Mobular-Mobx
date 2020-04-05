@@ -1,4 +1,4 @@
-package com.example.flutter_slidy_modular
+package br.alamedapps.flutterslidy
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

@@ -1,3 +1,5 @@
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_slidy_modular/app/shared/auth/auth_controller.dart';
 import 'package:flutter_slidy_modular/app/shared/repositories/pokemon_repository.dart';
 import 'package:mobx/mobx.dart';
 part 'home_controller.g.dart';
@@ -25,5 +27,11 @@ abstract class _HomeControllerBase with Store {
   @action
   fetchPokemon(String name) async {
     pokemon = repository.getPokemon(name).asObservable();
+  }
+
+  @action
+  logoff() async {
+    await Modular.get<AuthController>().logout();
+    Modular.to.pushReplacementNamed('/login');
   }
 }

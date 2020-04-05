@@ -50,6 +50,13 @@ mixin _$HomeController on _HomeControllerBase, Store {
     return _$fetchPokemonAsyncAction.run(() => super.fetchPokemon(name));
   }
 
+  final _$logoffAsyncAction = AsyncAction('logoff');
+
+  @override
+  Future logoff() {
+    return _$logoffAsyncAction.run(() => super.logoff());
+  }
+
   final _$_HomeControllerBaseActionController =
       ActionController(name: '_HomeControllerBase');
 

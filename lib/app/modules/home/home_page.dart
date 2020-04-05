@@ -11,34 +11,36 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  final homeController = Modular.get<HomeController>();
-
+class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.exit_to_app), onPressed: controller.logoff),
+          ],
           title: Text("Pokemóns"),
         ),
         backgroundColor: Colors.redAccent,
         body: Observer(builder: (_) {
-          if (homeController.pokemons.error != null) {
+          if (controller.pokemons.error != null) {
             return Center(
               child: RaisedButton(
                   child: Text("Reload"),
                   onPressed: () {
-                    homeController.fetchPokemons();
+                    controller.fetchPokemons();
                   }),
             );
           }
 
-          if (homeController.pokemons.value == null) {
+          if (controller.pokemons.value == null) {
             return Center(
               child: CircularProgressIndicator(
                   backgroundColor: Colors.yellowAccent),
             );
           }
-          List<Pokemon> list = homeController.pokemons.value;
+          List<Pokemon> list = controller.pokemons.value;
           return GridView.builder(
             itemCount: list.length,
             itemBuilder: (context, index) {
@@ -46,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.yellow,
                   child: InkWell(
                     onTap: () {
-                      homeController
+                      controller
                           .fetchPokemon(list[index].name)
                           .then((res) => Modular.to.pushNamed('/pokemon'));
                     },

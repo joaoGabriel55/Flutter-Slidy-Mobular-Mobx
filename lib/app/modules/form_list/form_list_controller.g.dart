@@ -50,6 +50,13 @@ mixin _$FormListController on _FormListBase, Store {
     return _$initAsyncAction.run(() => super.init());
   }
 
+  final _$logoffAsyncAction = AsyncAction('logoff');
+
+  @override
+  Future logoff() {
+    return _$logoffAsyncAction.run(() => super.logoff());
+  }
+
   final _$_FormListBaseActionController =
       ActionController(name: '_FormListBase');
 
